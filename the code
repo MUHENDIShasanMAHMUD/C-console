@@ -1,0 +1,35 @@
+string x, y; // x ve y adında iki string tipinde değişken tanımlanır
+Console.WriteLine("iki değişkenliğiniz giriniz lütfen:"); // kullanıcıya iki değişken girilmesi istenir
+x = Console.ReadLine(); // ilk değişken kullanıcıdan okunur ve x'e atanır
+y = Console.ReadLine(); // ikinci değişken kullanıcıdan okunur ve y'ye atanır
+Console.WriteLine("hangi işlem yapacaksınız (+,-,*,/)"); // kullanıcıya hangi işlemin yapılacağı sorulur
+string a; // a adında bir string tipinde değişken tanımlanır
+a = Console.ReadLine(); // kullanıcının girdiği işlem tipi a'ya atanır
+int h = int.Parse(x); // x string'i int tipine dönüştürülerek h adındaki değişkene atanır
+int m = int.Parse(y); // y string'i int tipine dönüştürülerek m adındaki değişkene atanır
+
+#region dağişken tanıtma
+long k = h + m; // toplama işlemi sonucu k değişkenine atanır
+long p = h - m; // çıkarma işlemi sonucu p değişkenine atanır
+long o = h * m; // çarpma işlemi sonucu o değişkenine atanır
+long u = h / m; // bölme işlemi sonucu u değişkenine atanır
+#endregion
+
+switch (a) { // a değişkeni için switch-case yapısı kullanılır
+    case "+": // eğer a değişkeni "+" ise
+        Console.WriteLine(k); // k değişkeni ekrana yazdırılır
+        break; // switch-case yapısından çıkılır
+    case "-": // eğer a değişkeni "-" ise
+        Console.WriteLine(p); // p değişkeni ekrana yazdırılır
+        break; // switch-case yapısından çıkılır
+    case "*": // eğer a değişkeni "*" ise
+        Console.WriteLine(o); // o değişkeni ekrana yazdırılır
+        break; // switch-case yapısından çıkılır
+    case "/": // eğer a değişkeni "/" ise
+        Console.WriteLine(u); // u değişkeni ekrana yazdırılır
+        break; // switch-case yapısından çıkılır
+    default: // eğer a değişkeni yukarıdaki durumlardan hiçbiri değilse
+        Console.WriteLine("yanlış işaret girdiniz"); // hata mesajı ekrana yazdırılır
+        break; // switch-case yapısından çıkılır
+}
+Console.ReadKey(); // kullanıcının bir tuşa basmasını bekleyerek programın kapanmasını engeller
